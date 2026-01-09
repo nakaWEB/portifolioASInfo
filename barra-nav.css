@@ -1,0 +1,271 @@
+:root {
+    --bar-fundo: hsla(165, 100%, 78%, 0.192);
+    --transition: all 0.3s ease;
+    --botoes-barra: rgb(0, 0, 0);
+    --botoes-barra-fundo: hsla(165, 100%, 78%, 0.281);
+    --botoes-barra-fundo-hover: rgba(0, 255, 221, 0.281);
+    --barra-fundo-menor: hsla(165, 100%, 78%, 0.356);
+}
+/*------------------------------------//-------------------------------*/
+/* barra nav */
+.barra-nav-menor {
+    position: fixed;
+    top: 0%;
+    left: 0px;
+    width: 100%;
+    height: 3%;
+    background: var(--barra-fundo-menor);
+    backdrop-filter: blur(2px);
+    z-index: 10000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+.barra-nav {
+    position: fixed;
+    top: 3%;
+    width: 100%;
+    height: 7%;
+    background: var(--bar-fundo);
+    border: solid 1px var(--botoes-barra-fundo-hover);
+    backdrop-filter: blur(2px);
+    z-index: 10000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+/*------------------------------------//-------------------------------*/
+.nav-links {
+    display: flex;
+    width: min-content;
+    list-style: none;
+    padding: 20px 0;
+}
+
+.nav-links li {
+    margin-bottom: 0px;
+}
+
+.nav-links a {
+    width: 180PX;
+    display: flex;
+    align-items: center;
+    padding: 9px 20px;
+    margin: 3px;
+    border-radius: 5px;
+    color: var(--botoes-barra);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    background-color: var(--botoes-barra-fundo);
+    border-left: 4px solid var(--botoes-barra-fundo);
+}
+
+.nav-links a:hover {
+    background-color: var(--botoes-barra-fundo-hover);
+    border-left: 4px solid var(--botoes-barra-fundo-hover);
+}
+
+.nav-links i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.barra-nav.collapsed .nav-links span {
+    display: none;
+}
+/*------------------------------------//-------------------------------*/
+.sub-menu {
+    display: none;
+    background-color: var(--botoes-barra-fundo);
+    padding-left: 20px;
+    width: 65%;
+    height: auto;
+}
+
+.sub-menu.show {
+    position: fixed;
+    top: 150%;
+    display: block;
+    height: 0px;
+    width: 0px;
+}
+
+.sub-menu a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    height: min-content;
+    width: 20vh;
+    background-color: var(--botoes-barra-fundo)
+}
+/*------------------------------------//-------------------------------*/
+.theme-toggle {
+    position: absolute;
+    left: 93%;
+    width: 5%;
+    height: 70%;
+    padding: 10px;
+    background-color: var(--botoes-barra-fundo);
+    color: var(--botoes-barra);
+    border: 1px solid var(--botoes-barra-fundo);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    background-color: var(--botoes-barra-fundo-hover);
+}
+/*------------------------------------//-------------------------------*/
+/* "barra de pesquisar" */
+.main-content {
+    margin-left: 280px;
+    min-height: 100vh;
+    transition: var(--transition);
+}
+
+.barra-nav.collapsed + .main-content {
+    margin-left: 80px;
+}
+
+.header {
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: min-content;
+    width: 80%;
+    position: fixed;
+    left: 20%;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 4px 15px;
+    border: 1px solid var(--botoes-barra-fundo);
+    border-radius: 2px;
+    background-color: var(--botoes-barra-fundo);
+    color: var(--botoes-barra);
+    outline: none;
+}
+
+.search-bar button {
+    padding: 5px 20px;
+    background-color: var(--botoes-barra-fundo);
+    color: var(--botoes-barra);
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-bar button:hover {
+    background-color: var(--botoes-barra-fundo-hover);
+}
+/*------------------------------------//-------------------------------*/
+/* Responsivi*/
+@media (max-width: 768px) {
+    .barra-nav {
+        transform: translateX(-100%);
+        width: 280px;
+    }
+
+    .barra-nav.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .sectors-grid {
+        grid-template-columns: 2fr;
+    }
+}
+/*------------------------------------//-------------------------------*/
+.nav-categoria {
+    position: fixed;
+    top: 10%;
+    width: 100%;
+    height: 5%;
+    background: var(--bar-fundo);
+    backdrop-filter: blur(2px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--botoes-barra-fundo-hover);
+    cursor: grab;
+    user-select: none;
+}
+
+.nav-categoria:active {
+    cursor: grabbing;
+}
+
+.nav-categoria {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.nav-categoria::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.nav-categoria.collapsed {
+    padding: 15px 50px;
+    backdrop-filter: blur(2px);
+    background: var(--bar-fundo-collapsed);
+}
+/*------------------------------------//-------------------------------*/
+.rainbow-text {
+  font-size: 25px;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding: 10px;
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+
+    #d6d6d6 42%,
+
+    #d6d6d6 70%,
+
+    #000000 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rainbow-flow 4s linear infinite;
+}
+
+@keyframes rainbow-flow {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+/*------------------------------------//-------------------------------*/
+.teste {
+    background: linear-gradient(
+    90deg,
+    #ff0000 0%,   /* vermelho   */
+    #ff7f00 14%,  /* laranja    */
+    #ffff00 28%,  /* amarelo    */
+    #00ff00 42%,  /* verde      */
+    #00ffff 56%,  /* ciano      */
+    #0000ff 70%,  /* azul       */
+    #8b00ff 84%,  /* violeta    */
+    #ff0000 100%  /* volta ao vermelho para loop contínuo */
+  );
+}
