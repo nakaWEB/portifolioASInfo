@@ -1,0 +1,20 @@
+.logo-inc {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90%;
+    opacity: 80%;
+    color: #000;
+
+}
+
+.meio1 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
