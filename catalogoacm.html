@@ -2,818 +2,549 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./barra-nav.css">
+	<link rel="stylesheet" href="./body.css">
+	<link rel="stylesheet" href="./carrocel.css">
+	<link rel="stylesheet" href="./rodape.css">
 </head>
+<style>
+	.amostras-acms {
+		position: absolute;
+		top: 30%;
+		left: 0px;
+		width: 99%;
+		background: hsla(0, 0%, 85%, 0.342);
+		backdrop-filter: blur(2px);
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		padding: 0.5%;
+	}
+
+	.card-acm img {
+		width: 90%;
+		height: 90%;
+		border-radius: 20px;
+		border: 1px solid black;
+		transition: 0.2s;
+	}
+
+	.card-acm img:hover {
+		transition: 0.2s;
+		transform: scale(1.11);
+		border-radius: 20px;
+		border: 1px solid black;
+	}
+
+	.amostras-acms>div {
+		display: none;
+	}
+
+	.amostras-acms>div.ativo {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		padding: 0.5%;
+		flex-wrap: wrap;
+		gap: 10px;
+		width: 500%;
+	}
+
+	.filtros {
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.filtros button {
+		border: 2px solid rgb(0, 255, 42);
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+	}
+</style>
 
 <body>
-<div class="elementor-element elementor-element-7bfda43 e-flex e-con-boxed e-con e-parent" data-id="7bfda43" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-99704d7 e-n-tabs-mobile elementor-widget elementor-widget-n-tabs" data-id="99704d7" data-element_type="widget" data-settings="{&quot;horizontal_scroll&quot;:&quot;disable&quot;}" data-widget_type="nested-tabs.default">
-				<div class="elementor-widget-container">
-							<div class="e-n-tabs e-activated" data-widget-number="160892119" aria-label="Abas. Abra itens com &quot;Enter&quot; ou &quot;Espaço&quot;, feche com &quot;Escape&quot; e navegue usando as teclas de &quot;Seta&quot;." data-touch-mode="false">
-			<div class="e-n-tabs-heading" role="tablist" data-page-x="">
-					<button id="e-n-tab-title-1608921191" class="e-n-tab-title" aria-selected="false" data-tab-index="1" role="tab" tabindex="-1" aria-controls="e-n-tab-content-1608921191" style="--n-tabs-title-order: 1;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_SOLIDOS.png" alt="Descrição da imagem Sólidos" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Sólidas			</span>
-		</button>
-				<button id="e-n-tab-title-1608921192" class="e-n-tab-title" aria-selected="true" data-tab-index="2" role="tab" tabindex="0" aria-controls="e-n-tab-content-1608921192" style="--n-tabs-title-order: 2;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_BRILHANTES.png" alt="Descrição da imagem Brilhantes" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Brilhantes			</span>
-		</button>
-				<button id="e-n-tab-title-1608921193" class="e-n-tab-title" aria-selected="false" data-tab-index="3" role="tab" tabindex="-1" aria-controls="e-n-tab-content-1608921193" style="--n-tabs-title-order: 3;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_METALICA.png" alt="Descrição da imagem Metálica" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Metálicas			</span>
-		</button>
-				<button id="e-n-tab-title-1608921194" class="e-n-tab-title" aria-selected="false" data-tab-index="4" role="tab" tabindex="-1" aria-controls="e-n-tab-content-1608921194" style="--n-tabs-title-order: 4;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_NANO.png" alt="Descrição da imagem Nano" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Nano			</span>
-		</button>
-				<button id="e-n-tab-title-1608921195" class="e-n-tab-title" aria-selected="false" data-tab-index="5" role="tab" tabindex="-1" aria-controls="e-n-tab-content-1608921195" style="--n-tabs-title-order: 5;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_WOOD.png" alt="Descrição da imagem Wood" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Wood			</span>
-		</button>
-				<button id="e-n-tab-title-1608921196" class="e-n-tab-title" aria-selected="false" data-tab-index="6" role="tab" tabindex="-1" aria-controls="e-n-tab-content-1608921196" style="--n-tabs-title-order: 6;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_NATURAL.png" alt="Descrição da imagem Natural" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Natural			</span>
-		</button>
-				<button id="e-n-tab-title-1608921197" class="e-n-tab-title" aria-selected="false" data-tab-index="7" role="tab" tabindex="-1" aria-controls="e-n-tab-content-1608921197" style="--n-tabs-title-order: 7;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_FUSION.png" alt="Descrição da imagem Fusion" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Fusion			</span>
-		</button>
-				<button id="e-n-tab-title-1608921198" class="e-n-tab-title" aria-selected="false" data-tab-index="8" role="tab" tabindex="-1" aria-controls="e-n-tab-content-1608921198" style="--n-tabs-title-order: 8;"><img src="/wp-content/uploads/2018/10/AL_DESTAQUE_CRINKLE.png" alt="Descrição da imagem Wood" class="imgcolorchart" style="width: 60px; height: 60px; vertical-align: middle; margin-right: 5px;">
-						<span class="e-n-tab-title-text" style="padding-left: 0px;">
-				Crinkle			</span>
-		</button>
-					</div>
-			<div class="e-n-tabs-content">
-				<div id="e-n-tab-content-1608921191" role="tabpanel" aria-labelledby="e-n-tab-title-1608921191" data-tab-index="1" style="--n-tabs-title-order: 1;" class="elementor-element elementor-element-51b3916 e-con-full e-flex e-con e-child" data-id="51b3916" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-26ab70f elementor-widget elementor-widget-heading" data-id="26ab70f" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">SÓLIDAS</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-3b094d8 e-grid e-con-boxed e-con e-child" data-id="3b094d8" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-572970c elementor-widget elementor-widget-image" data-id="572970c" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4ODg5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img fetchpriority="high" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_PURE-WHITE_KR100-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368733" alt="SÓLIDO PURE WHITE - KR1000" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_PURE-WHITE_KR100-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_PURE-WHITE_KR100-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_PURE-WHITE_KR100-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_PURE-WHITE_KR100.png 1280w" sizes="(max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido pure white - kr1000</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-286c6c8 elementor-widget elementor-widget-image" data-id="286c6c8" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4ODg1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_WHITE_KR101-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368746" alt="SÓLIDO WHITE - KR1010" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_WHITE_KR101-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_WHITE_KR101-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_WHITE_KR101-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_WHITE_KR101.png 1280w" sizes="(max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido white - kr1010</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-5a69ae4 elementor-widget elementor-widget-image" data-id="5a69ae4" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4ODkzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRANCO-POLAR_KR104-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368723" alt="SÓLIDO BRANCO POLAR - KR1040" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRANCO-POLAR_KR104-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRANCO-POLAR_KR104-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRANCO-POLAR_KR104-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRANCO-POLAR_KR104.png 1280w" sizes="(max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido branco polar - kr1040</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-9cba91d elementor-widget elementor-widget-image" data-id="9cba91d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4ODk5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_LIGHT-GREY_KR107-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368727" alt="SÓLIDO LIGHT GREY - KR1070" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_LIGHT-GREY_KR107-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_LIGHT-GREY_KR107-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_LIGHT-GREY_KR107-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_LIGHT-GREY_KR107.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido light grey - kr1070</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-5271df2 elementor-widget elementor-widget-image" data-id="5271df2" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTA2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_OYSTER_KR108-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368732" alt="SÓLIDO OYSTER - KR1080" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_OYSTER_KR108-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_OYSTER_KR108-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_OYSTER_KR108-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_OYSTER_KR108.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido oyster - kr1080</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-a5375ad elementor-widget elementor-widget-image" data-id="a5375ad" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTEyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_BONE-WHITE_KR106-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371214" alt="SÓLIDO BONE WHITE - KR1060" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_BONE-WHITE_KR106-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_BONE-WHITE_KR106-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_BONE-WHITE_KR106-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_BONE-WHITE_KR106.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido bone white - kr1060</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-a08bb8a elementor-widget elementor-widget-image" data-id="a08bb8a" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTE4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLACK_KR150-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368720" alt="SÓLIDO BLACK - KR1500" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLACK_KR150-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLACK_KR150-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLACK_KR150-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLACK_KR150.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido black - kr1500</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-caaa419 elementor-widget elementor-widget-image" data-id="caaa419" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTI0IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7021_KR157-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371215" alt="SÓLIDO RAL 7021 - KR1570" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7021_KR157-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7021_KR157-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7021_KR157-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7021_KR157.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido ral 7021 - kr1570</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e0d0671 elementor-widget elementor-widget-image" data-id="e0d0671" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTM2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_SIGNAL-GREY_KR250-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368743" alt="SÓLIDO SIGNAL GREY - KR2500" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_SIGNAL-GREY_KR250-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_SIGNAL-GREY_KR250-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_SIGNAL-GREY_KR250-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_SIGNAL-GREY_KR250.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido signal grey - kr2500</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-4b2e56c elementor-widget elementor-widget-image" data-id="4b2e56c" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTQzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RAL-7037_KR251-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368735" alt="SÓLIDO RAL 7037 - KR2510" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RAL-7037_KR251-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RAL-7037_KR251-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RAL-7037_KR251-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RAL-7037_KR251.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido ral 7037 - kr2510</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-a9e6ee0 elementor-widget elementor-widget-image" data-id="a9e6ee0" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTQ2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7045_KR253-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371217" alt="SÓLIDO RAL 7045 - KR2530" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7045_KR253-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7045_KR253-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7045_KR253-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7045_KR253.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido ral 7045 - kr2530</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-6f39991 elementor-widget elementor-widget-image" data-id="6f39991" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTQ5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ANTHRACITE_KR257-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368716" alt="SÓLIDO ANTHRACITE - KR2570" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ANTHRACITE_KR257-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ANTHRACITE_KR257-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ANTHRACITE_KR257-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ANTHRACITE_KR257.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido anthracite - kr2570</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-46a4a70 elementor-widget elementor-widget-image" data-id="46a4a70" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTYyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRONZE-1003_KR307-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368724" alt="SÓLIDO BRONZE 1003 - KR3070" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRONZE-1003_KR307-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRONZE-1003_KR307-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRONZE-1003_KR307-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRONZE-1003_KR307.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido bronze 1003 - kr3070</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-42b46cd elementor-widget elementor-widget-image" data-id="42b46cd" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTY5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE-SESI_KR312-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368731" alt="SÓLIDO ORANGE SESI - KR3120" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE-SESI_KR312-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE-SESI_KR312-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE-SESI_KR312-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE-SESI_KR312.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido orange sesi - kr3120</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-5f4cc2b elementor-widget elementor-widget-image" data-id="5f4cc2b" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTc1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-ULTRAMARINE_KR400-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368719" alt="SÓLIDO AZUL ULTRAMARINE - KR4000" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-ULTRAMARINE_KR400-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-ULTRAMARINE_KR400-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-ULTRAMARINE_KR400-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-ULTRAMARINE_KR400.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido azul ultramarine - kr4000</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-ab4d976 elementor-widget elementor-widget-image" data-id="ab4d976" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTgyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-GM_KR401-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368718" alt="SÓLIDO AZUL GM - KR4010" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-GM_KR401-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-GM_KR401-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-GM_KR401-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-GM_KR401.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido azul gm - kr4010</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-07ab9de elementor-widget elementor-widget-image" data-id="07ab9de" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY4OTg5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_NEW-BLUE-PEUGEOT_KR403-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368728" alt="SÓLIDO NEW BLUE PEUGEOT - KR4030" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_NEW-BLUE-PEUGEOT_KR403-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_NEW-BLUE-PEUGEOT_KR403-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_NEW-BLUE-PEUGEOT_KR403-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_NEW-BLUE-PEUGEOT_KR403.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido new blue peugeot - kr4030</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e9fcd48 elementor-widget elementor-widget-image" data-id="e9fcd48" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDE2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_JADE-GL_KR407-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371218" alt="SÓLIDO JADE GL - KR4070" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_JADE-GL_KR407-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_JADE-GL_KR407-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_JADE-GL_KR407-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_JADE-GL_KR407.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido jade gl - kr4070</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-3abd01a elementor-widget elementor-widget-image" data-id="3abd01a" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDIyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-2925C_KR409-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368717" alt="SÓLIDO AZUL 2925C - KR4090" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-2925C_KR409-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-2925C_KR409-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-2925C_KR409-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-2925C_KR409.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido azul 2925c - kr4090</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-eed4887 elementor-widget elementor-widget-image" data-id="eed4887" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDMwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLUE-VOLVO_KR410-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368721" alt="SÓLIDO BLUE VOLVO - KR4100" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLUE-VOLVO_KR410-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLUE-VOLVO_KR410-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLUE-VOLVO_KR410-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLUE-VOLVO_KR410.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido blue volvo - kr4100</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-9baa4e9 elementor-widget elementor-widget-image" data-id="9baa4e9" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDM2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-FOSCO_KR450-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368745" alt="SÓLIDO VERDE FOSCO - KR4500" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-FOSCO_KR450-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-FOSCO_KR450-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-FOSCO_KR450-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-FOSCO_KR450.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido verde fosco - kr4500</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-406a23e elementor-widget elementor-widget-image" data-id="406a23e" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDQzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-561C_KR452-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368744" alt="SÓLIDO VERDE 561C - KR4520" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-561C_KR452-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-561C_KR452-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-561C_KR452-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-561C_KR452.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido verde 561c - kr4520</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-d0a161d elementor-widget elementor-widget-image" data-id="d0a161d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDUwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-GREEN_KR454-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368747" alt="SÓLIDO YELLOW GREEN - KR4540" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-GREEN_KR454-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-GREEN_KR454-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-GREEN_KR454-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-GREEN_KR454.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido yellow green - kr4540</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-bf1c485 elementor-widget elementor-widget-image" data-id="bf1c485" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDU3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RED-BANK_KR500-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368737" alt="SÓLIDO RED BANK - KR5000" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RED-BANK_KR500-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RED-BANK_KR500-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RED-BANK_KR500-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RED-BANK_KR500.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido red bank - kr5000</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-26a47c9 elementor-widget elementor-widget-image" data-id="26a47c9" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDY0IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RUBY_KR501-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368742" alt="SÓLIDO RUBY - KR5010" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RUBY_KR501-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RUBY_KR501-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RUBY_KR501-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RUBY_KR501.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido ruby - kr5010</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-3264d15 elementor-widget elementor-widget-image" data-id="3264d15" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDcxIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BURGUNDY_KR509-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368725" alt="SÓLIDO BURGUNDY - KR5090" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BURGUNDY_KR509-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BURGUNDY_KR509-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BURGUNDY_KR509-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BURGUNDY_KR509.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido burgundy - kr5090</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-2cd95c7 elementor-widget elementor-widget-image" data-id="2cd95c7" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDc4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-RAL-1023_KR702-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368748" alt="SÓLIDO YELLOW RAL 1023 - KR7020" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-RAL-1023_KR702-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-RAL-1023_KR702-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-RAL-1023_KR702-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-RAL-1023_KR702.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido yellow ral 1023 - kr7020</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e45867f elementor-widget elementor-widget-image" data-id="e45867f" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDg4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-SHELL_KR703-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368715" alt="SÓLIDO AMARELO SHELL - KR7030" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-SHELL_KR703-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-SHELL_KR703-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-SHELL_KR703-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-SHELL_KR703.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido amarelo shell - kr7030</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-eea4324 elementor-widget elementor-widget-image" data-id="eea4324" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MDk1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-RAL-1003_KR705-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368714" alt="SÓLIDO AMARELO RAL 1003 - KR7050" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-RAL-1003_KR705-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-RAL-1003_KR705-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-RAL-1003_KR705-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-RAL-1003_KR705.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido amarelo ral 1003 - kr7050</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-cbea218 elementor-widget elementor-widget-image" data-id="cbea218" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTAyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE_KR710-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368729" alt="SÓLIDO ORANGE - KR7100" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE_KR710-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE_KR710-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE_KR710-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE_KR710.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido orange - kr7100</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-84328f4 elementor-widget elementor-widget-image" data-id="84328f4" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTA5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_ORANGE-144C_KR754-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371219" alt="SÓLIDO ORANGE 144C - KR7540" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_ORANGE-144C_KR754-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_ORANGE-144C_KR754-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_ORANGE-144C_KR754-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_ORANGE-144C_KR754.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido orange 144c - kr7540</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-3d2664e elementor-widget elementor-widget-image" data-id="3d2664e" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTE2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-7647C_KR907-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368738" alt="SÓLIDO ROSA 7647C - KR9070" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-7647C_KR907-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-7647C_KR907-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-7647C_KR907-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-7647C_KR907.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido rosa 7647c - kr9070</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-dc1b50c elementor-widget elementor-widget-image" data-id="dc1b50c" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTIzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-7672C_KR909-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368741" alt="SÓLIDO ROXO 7672C - KR9090" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-7672C_KR909-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-7672C_KR909-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-7672C_KR909-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-7672C_KR909.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido roxo 7672c - kr9090</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-665b050 elementor-widget elementor-widget-image" data-id="665b050" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTMwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-267U_KR914-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368740" alt="SÓLIDO ROXO 267U - KR9140" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-267U_KR914-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-267U_KR914-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-267U_KR914-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-267U_KR914.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido roxo 267u - kr9140</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-0c73f16 elementor-widget elementor-widget-image" data-id="0c73f16" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTM3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-RAL-4003_KR925-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368739" alt="SÓLIDO ROSA RAL 4003 - KR9250" srcset="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-RAL-4003_KR925-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-RAL-4003_KR925-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-RAL-4003_KR925-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-RAL-4003_KR925.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">sólido rosa ral 4003 - kr9250</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-				</div>
-		<div id="e-n-tab-content-1608921192" role="tabpanel" aria-labelledby="e-n-tab-title-1608921192" data-tab-index="2" style="--n-tabs-title-order: 2;" class="elementor-element elementor-element-e05f900 e-flex e-con-boxed e-con e-child e-active" data-id="e05f900" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-987f821 elementor-widget elementor-widget-heading" data-id="987f821" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">BRILHANTES</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-c3652a5 e-grid e-con-boxed e-con e-child" data-id="c3652a5" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-588fabc elementor-widget elementor-widget-image" data-id="588fabc" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjgwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_BRANCO-ALASKA_KR103-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368793" alt="Brilhantes Branco Alaska - KR1030" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_BRANCO-ALASKA_KR103-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_BRANCO-ALASKA_KR103-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_BRANCO-ALASKA_KR103-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_BRANCO-ALASKA_KR103.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes branco alaska - kr1030</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-1b9fa70 elementor-widget elementor-widget-image" data-id="1b9fa70" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5Mjg2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_BRANCO-ALTO-BRILHO_KR133-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371223" alt="BRILHANTES BRANCO ALTO BRILHO - KR1330" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_BRANCO-ALTO-BRILHO_KR133-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_BRANCO-ALTO-BRILHO_KR133-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_BRANCO-ALTO-BRILHO_KR133-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_BRANCO-ALTO-BRILHO_KR133.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes branco alto brilho - kr1330</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-7b54ec7 elementor-widget elementor-widget-image" data-id="7b54ec7" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjkzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_PRETO-BRILHANTE_KR151-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368796" alt="Brilhantes Preto Brilhante - KR1510" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_PRETO-BRILHANTE_KR151-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_PRETO-BRILHANTE_KR151-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_PRETO-BRILHANTE_KR151-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_PRETO-BRILHANTE_KR151.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes preto brilhante - kr1510</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-61bd4e0 elementor-widget elementor-widget-image" data-id="61bd4e0" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5Mjk5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AZUL-BRILHANTE_KR406-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368791" alt="Brilhantes Azul Brilhante - KR4060" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AZUL-BRILHANTE_KR406-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AZUL-BRILHANTE_KR406-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AZUL-BRILHANTE_KR406-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AZUL-BRILHANTE_KR406.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes azul brilhante - kr4060</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-b0a4755 elementor-widget elementor-widget-image" data-id="b0a4755" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzA2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_AZUL-TURQUESA_KR438-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371224" alt="BRILHANTES AZUL TURQUESA - KR4380" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_AZUL-TURQUESA_KR438-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_AZUL-TURQUESA_KR438-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_AZUL-TURQUESA_KR438-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_AZUL-TURQUESA_KR438.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes azul turquesa - kr4380</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-001ccfa elementor-widget elementor-widget-image" data-id="001ccfa" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzEzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-BRILHANTE_KR451-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368797" alt="Brilhantes Verde Brilhante - KR4510" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-BRILHANTE_KR451-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-BRILHANTE_KR451-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-BRILHANTE_KR451-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-BRILHANTE_KR451.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes verde brilhante - kr4510</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-4c6b17f elementor-widget elementor-widget-image" data-id="4c6b17f" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzIwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-SICOOB_KR453-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368798" alt="Brilhantes Verde Sicoob - KR4530" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-SICOOB_KR453-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-SICOOB_KR453-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-SICOOB_KR453-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-SICOOB_KR453.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes verde sicoob - kr4530</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e0b2695 elementor-widget elementor-widget-image" data-id="e0b2695" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzI3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERMELHO-BRILHANTE_KR502-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368799" alt="Brilhantes Vermelho Brilhante - KR5020" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERMELHO-BRILHANTE_KR502-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERMELHO-BRILHANTE_KR502-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERMELHO-BRILHANTE_KR502-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERMELHO-BRILHANTE_KR502.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes vermelho brilhante - kr5020</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-ed4eba8 elementor-widget elementor-widget-image" data-id="ed4eba8" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzM0IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AMARELO-BRILHANTE_KR701-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368790" alt="Brilhantes Amarelo Brilhante - KR7010" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AMARELO-BRILHANTE_KR701-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AMARELO-BRILHANTE_KR701-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AMARELO-BRILHANTE_KR701-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AMARELO-BRILHANTE_KR701.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes amarelo brilhante - kr7010</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-771940f elementor-widget elementor-widget-image" data-id="771940f" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzQwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_LARANJA-BRILHANTE_KR751-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368795" alt="Brilhantes Laranja Brilhante - KR7510" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_LARANJA-BRILHANTE_KR751-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_LARANJA-BRILHANTE_KR751-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_LARANJA-BRILHANTE_KR751-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_LARANJA-BRILHANTE_KR751.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">brilhantes laranja brilhante - kr7510</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
-		<div id="e-n-tab-content-1608921193" role="tabpanel" aria-labelledby="e-n-tab-title-1608921193" data-tab-index="3" style="--n-tabs-title-order: 3;" class=" elementor-element elementor-element-07f0a7b e-flex e-con-boxed e-con e-child" data-id="07f0a7b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-bac2bec elementor-widget elementor-widget-heading" data-id="bac2bec" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">METÁLICAS</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-54ffe3c e-grid e-con-boxed e-con e-child" data-id="54ffe3c" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-63000b4 elementor-widget elementor-widget-image" data-id="63000b4" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTYyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRASIL-SILVER-METALLIC_KR200-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368763" alt="Metálica Brasil Silver Metallic - KR2000" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRASIL-SILVER-METALLIC_KR200-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRASIL-SILVER-METALLIC_KR200-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRASIL-SILVER-METALLIC_KR200-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRASIL-SILVER-METALLIC_KR200.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica brasil silver metallic - kr2000</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-6718aea elementor-widget elementor-widget-image" data-id="6718aea" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTY4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-METALLIC_KR201-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368776" alt="Metálica Silver Metallic - KR2010" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-METALLIC_KR201-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-METALLIC_KR201-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-METALLIC_KR201-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-METALLIC_KR201.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica silver metallic - kr2010</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-7fb728f elementor-widget elementor-widget-image" data-id="7fb728f" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTc4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_PRATA_KR202-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368774" alt="Metálica Prata - KR2020" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_PRATA_KR202-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_PRATA_KR202-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_PRATA_KR202-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_PRATA_KR202.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica prata - kr2020</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-2b8cba6 elementor-widget elementor-widget-image" data-id="2b8cba6" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTg1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SMOKE-SILVER-METALLIC_KR203-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368777" alt="Metálica Smoke Silver Metallic - KR2030" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SMOKE-SILVER-METALLIC_KR203-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SMOKE-SILVER-METALLIC_KR203-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SMOKE-SILVER-METALLIC_KR203-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SMOKE-SILVER-METALLIC_KR203.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica smoke silver metallic - kr2030</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-cf8d713 elementor-widget elementor-widget-image" data-id="cf8d713" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTkyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GREY-METALLIC_KR204-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368773" alt="Metálica Grey Metallic - KR2040" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GREY-METALLIC_KR204-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GREY-METALLIC_KR204-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GREY-METALLIC_KR204-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GREY-METALLIC_KR204.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica grey metallic - kr2040</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e024f60 elementor-widget elementor-widget-image" data-id="e024f60" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MTk5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_DARK-GREY-METALLIC_KR205-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368771" alt="Metálica Dark Grey Metallic - KR2050" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_DARK-GREY-METALLIC_KR205-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_DARK-GREY-METALLIC_KR205-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_DARK-GREY-METALLIC_KR205-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_DARK-GREY-METALLIC_KR205.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica dark grey metallic - kr2050</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-379fbc3 elementor-widget elementor-widget-image" data-id="379fbc3" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjA2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CINZA-TITANIUM_KR210-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368770" alt="Metálica Cinza Titanium - KR2100" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CINZA-TITANIUM_KR210-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CINZA-TITANIUM_KR210-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CINZA-TITANIUM_KR210-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CINZA-TITANIUM_KR210.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica cinza titanium - kr2100</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-2e44cff elementor-widget elementor-widget-image" data-id="2e44cff" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjEzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CHAMPAGNE-METALLIC_KR300-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368769" alt="Metálica Champagne Metallic - KR3000" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CHAMPAGNE-METALLIC_KR300-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CHAMPAGNE-METALLIC_KR300-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CHAMPAGNE-METALLIC_KR300-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CHAMPAGNE-METALLIC_KR300.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica champagne metallic - kr3000</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-bf8cad4 elementor-widget elementor-widget-image" data-id="bf8cad4" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjIwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-METALLIC_KR302-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368767" alt="Metálica Bronze Metallic - KR3020" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-METALLIC_KR302-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-METALLIC_KR302-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-METALLIC_KR302-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-METALLIC_KR302.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica bronze metallic - kr3020</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-d2c29e8 elementor-widget elementor-widget-image" data-id="d2c29e8" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjI4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRIGHT-BRONZE-METALLIC_KR306-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368764" alt="Metálica Bright Bronze Metallic - KR3060" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRIGHT-BRONZE-METALLIC_KR306-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRIGHT-BRONZE-METALLIC_KR306-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRIGHT-BRONZE-METALLIC_KR306-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRIGHT-BRONZE-METALLIC_KR306.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica bright bronze metallic - kr3060</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-4563265 elementor-widget elementor-widget-image" data-id="4563265" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjM0IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1001_KR309-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368765" alt="Metálica Bronze 1001 - KR3090" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1001_KR309-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1001_KR309-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1001_KR309-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1001_KR309.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica bronze 1001 - kr3090</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-796e05d elementor-widget elementor-widget-image" data-id="796e05d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjQxIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1002_KR310-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368766" alt="Metálica Bronze 1002 - KR3100" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1002_KR310-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1002_KR310-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1002_KR310-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1002_KR310.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica bronze 1002 - kr3100</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-ead90da elementor-widget elementor-widget-image" data-id="ead90da" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjUxIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-GOLDEN_KR311-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368775" alt="Metálica Silver Golden - KR3110" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-GOLDEN_KR311-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-GOLDEN_KR311-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-GOLDEN_KR311-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-GOLDEN_KR311.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica silver golden - kr3110</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-dcb1029 elementor-widget elementor-widget-image" data-id="dcb1029" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjU4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GOLD-METALLIC_KR313-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368772" alt="Metálica Gold Metallic - KR3130" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GOLD-METALLIC_KR313-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GOLD-METALLIC_KR313-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GOLD-METALLIC_KR313-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GOLD-METALLIC_KR313.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica gold metallic - kr3130</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-8c5ccb7 elementor-widget elementor-widget-image" data-id="8c5ccb7" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjY1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BROWN-METALLIC_KR361-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368768" alt="Metálica Brown Metallic - KR3610" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BROWN-METALLIC_KR361-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BROWN-METALLIC_KR361-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BROWN-METALLIC_KR361-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BROWN-METALLIC_KR361.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica brown metallic - kr3610</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-edd3cb7 elementor-widget elementor-widget-image" data-id="edd3cb7" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MjcyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BLUE-METALLIC_KR404-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368762" alt="Metálica Blue Metallic - KR4040" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BLUE-METALLIC_KR404-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BLUE-METALLIC_KR404-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BLUE-METALLIC_KR404-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BLUE-METALLIC_KR404.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">metálica blue metallic - kr4040</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
-		<div id="e-n-tab-content-1608921194" role="tabpanel" aria-labelledby="e-n-tab-title-1608921194" data-tab-index="4" style="--n-tabs-title-order: 4;" class=" elementor-element elementor-element-6157d7c e-flex e-con-boxed e-con e-child" data-id="6157d7c" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-3cd1246 elementor-widget elementor-widget-heading" data-id="3cd1246" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">NANO</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-1d4a2e2 e-grid e-con-boxed e-con e-child" data-id="1d4a2e2" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-8d8977d elementor-widget elementor-widget-image" data-id="8d8977d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzQ3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_WHITE_BR850-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368816" alt="Nano White - KR8700" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_WHITE_BR850-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_WHITE_BR850-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_WHITE_BR850-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_WHITE_BR850.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">nano white - kr8700</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e4227ce elementor-widget elementor-widget-image" data-id="e4227ce" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzU0IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BLACK_BR851-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368810" alt="Nano Black - KR8710" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BLACK_BR851-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BLACK_BR851-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BLACK_BR851-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BLACK_BR851.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">nano black - kr8710</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-b991ada elementor-widget elementor-widget-image" data-id="b991ada" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzYwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_CHAMPAGNE_BR852-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368813" alt="Nano Champagne - KR8720" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_CHAMPAGNE_BR852-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_CHAMPAGNE_BR852-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_CHAMPAGNE_BR852-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_CHAMPAGNE_BR852.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">nano champagne - kr8720</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-f3e51c8 elementor-widget elementor-widget-image" data-id="f3e51c8" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5Mzc2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRONZE-1001_BR854-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368812" alt="Nano Bronze 1001 - KR8740" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRONZE-1001_BR854-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRONZE-1001_BR854-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRONZE-1001_BR854-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRONZE-1001_BR854.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">nano bronze 1001 - kr8740</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-5a37914 elementor-widget elementor-widget-image" data-id="5a37914" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5MzgzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_ANTHRACITE_BR855-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368809" alt="Nano Anthracite - KR8750" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_ANTHRACITE_BR855-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_ANTHRACITE_BR855-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_ANTHRACITE_BR855-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_ANTHRACITE_BR855.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">nano anthracite - kr8750</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-c69e3cd elementor-widget elementor-widget-image" data-id="c69e3cd" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5Mzg5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRASIL-SILVER-METALLIC_BR856-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368811" alt="Nano Brasil Silver Metallic - KR8760" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRASIL-SILVER-METALLIC_BR856-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRASIL-SILVER-METALLIC_BR856-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRASIL-SILVER-METALLIC_BR856-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRASIL-SILVER-METALLIC_BR856.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">nano brasil silver metallic - kr8760</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-0215153 elementor-widget elementor-widget-image" data-id="0215153" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5Mzk2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NANO_RAL-7044_BR857-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371310" alt="NANO RAL 7044 - BR8570" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/NANO_RAL-7044_BR857-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NANO_RAL-7044_BR857-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NANO_RAL-7044_BR857-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NANO_RAL-7044_BR857.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">nano ral 7044 - br8570</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
-		<div id="e-n-tab-content-1608921195" role="tabpanel" aria-labelledby="e-n-tab-title-1608921195" data-tab-index="5" style="--n-tabs-title-order: 5;" class=" elementor-element elementor-element-d5d12cd e-flex e-con-boxed e-con e-child" data-id="d5d12cd" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-c63d7ac elementor-widget elementor-widget-heading" data-id="c63d7ac" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">WOOD</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-d440314 e-grid e-con-boxed e-con e-child" data-id="d440314" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-f3832a1 elementor-widget elementor-widget-image" data-id="f3832a1" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTcwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_TEKA_BR950-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368864" alt="Wood Teka - BR9500" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_TEKA_BR950-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_TEKA_BR950-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_TEKA_BR950-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_TEKA_BR950.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood teka - br9500</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e5663f8 elementor-widget elementor-widget-image" data-id="e5663f8" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTc2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CARVALHO-MEL_BR952-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368855" alt="Wood Carvalho Mel - BR9520" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CARVALHO-MEL_BR952-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CARVALHO-MEL_BR952-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CARVALHO-MEL_BR952-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CARVALHO-MEL_BR952.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood carvalho mel - br9520</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-7e2504d elementor-widget elementor-widget-image" data-id="7e2504d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTgyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_MOGNO-PE_BR955-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368861" alt="WOOD MOGNO PE - BR9550" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_MOGNO-PE_BR955-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_MOGNO-PE_BR955-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_MOGNO-PE_BR955-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_MOGNO-PE_BR955.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood mogno pe - br9550</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-7dc701c elementor-widget elementor-widget-image" data-id="7dc701c" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTg1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_DARK_BR956-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368857" alt="Wood Dark - KR9760" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_DARK_BR956-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_DARK_BR956-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_DARK_BR956-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_DARK_BR956.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood dark - kr9760</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-ac8ab55 elementor-widget elementor-widget-image" data-id="ac8ab55" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTkxIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_WALNUT-NORDIC_BR958-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368865" alt="Wood Walnut Nordic - BR9580" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_WALNUT-NORDIC_BR958-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_WALNUT-NORDIC_BR958-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_WALNUT-NORDIC_BR958-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_WALNUT-NORDIC_BR958.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood walnut nordic - br9580</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-0ce2cbb elementor-widget elementor-widget-image" data-id="0ce2cbb" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTk3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_IMBUIA-PE_BR961-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368858" alt="Wood Imbuia PE - BR9610" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_IMBUIA-PE_BR961-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_IMBUIA-PE_BR961-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_IMBUIA-PE_BR961-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_IMBUIA-PE_BR961.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood imbuia pe - br9610</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-222fe50 elementor-widget elementor-widget-image" data-id="222fe50" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjAzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_AMERICAN-OAK_KR971-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371228" alt="WOOD AMERICAN OAK - KR9710" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_AMERICAN-OAK_KR971-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_AMERICAN-OAK_KR971-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_AMERICAN-OAK_KR971-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_AMERICAN-OAK_KR971.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood american oak - kr9710</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-9701ad7 elementor-widget elementor-widget-image" data-id="9701ad7" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjEwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MADEIRADO-2_KR973-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371229" alt="WOOD MADEIRADO 2 - KR9730" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MADEIRADO-2_KR973-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MADEIRADO-2_KR973-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MADEIRADO-2_KR973-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MADEIRADO-2_KR973.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood madeirado 2 - kr9730</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-0136c96 elementor-widget elementor-widget-image" data-id="0136c96" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjE3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CEREJEIRA_KR974-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368856" alt="Wood Cerejeira - KR9740" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CEREJEIRA_KR974-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CEREJEIRA_KR974-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CEREJEIRA_KR974-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CEREJEIRA_KR974.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood cerejeira - kr9740</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-0900393 elementor-widget elementor-widget-image" data-id="0900393" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjIzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_NEW-MOGNO_KR977-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368862" alt="Wood New Mogno - KR9770" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_NEW-MOGNO_KR977-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_NEW-MOGNO_KR977-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_NEW-MOGNO_KR977-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_NEW-MOGNO_KR977.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood new mogno - kr9770</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-992ded2 elementor-widget elementor-widget-image" data-id="992ded2" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjI5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_SUCUPIRA_KR980-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368863" alt="Wood Sucupira - KR9800" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_SUCUPIRA_KR980-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_SUCUPIRA_KR980-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_SUCUPIRA_KR980-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_SUCUPIRA_KR980.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood sucupira - kr9800</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-6669a5e elementor-widget elementor-widget-image" data-id="6669a5e" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjM1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BLACK_KR983-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371231" alt="WOOD BLACK - KR9830" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BLACK_KR983-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BLACK_KR983-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BLACK_KR983-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BLACK_KR983.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood black - kr9830</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-ea627e2 elementor-widget elementor-widget-image" data-id="ea627e2" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjQxIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MOGNO-CASTANHO_KR987-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371232" alt="WOOD MOGNO CASTANHO - KR9870" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MOGNO-CASTANHO_KR987-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MOGNO-CASTANHO_KR987-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MOGNO-CASTANHO_KR987-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MOGNO-CASTANHO_KR987.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood mogno castanho - kr9870</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-efa55cc elementor-widget elementor-widget-image" data-id="efa55cc" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NjQ3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BAMBOO_KR990-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371233" alt="WOOD BAMBOO - KR9900" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BAMBOO_KR990-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BAMBOO_KR990-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BAMBOO_KR990-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BAMBOO_KR990.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">wood bamboo - kr9900</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
-		<div id="e-n-tab-content-1608921196" role="tabpanel" aria-labelledby="e-n-tab-title-1608921196" data-tab-index="6" style="--n-tabs-title-order: 6;" class=" elementor-element elementor-element-6d52538 e-flex e-con-boxed e-con e-child" data-id="6d52538" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-183b42e elementor-widget elementor-widget-heading" data-id="183b42e" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">NATURAL</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-69ce6de e-grid e-con-boxed e-con e-child" data-id="69ce6de" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-1688409 elementor-widget elementor-widget-image" data-id="1688409" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDg2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-BRUSHED_BR600-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368841" alt="Natural Brushed - BR6000" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-BRUSHED_BR600-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-BRUSHED_BR600-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-BRUSHED_BR600-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-BRUSHED_BR600.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural brushed - br6000</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-7d200e0 elementor-widget elementor-widget-image" data-id="7d200e0" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDkyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_STAINLESS-STEEL_BR602-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368844" alt="Natural Stainless Steel - BR6020" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_STAINLESS-STEEL_BR602-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_STAINLESS-STEEL_BR602-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_STAINLESS-STEEL_BR602-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_STAINLESS-STEEL_BR602.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural stainless steel - br6020</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-59a94a6 elementor-widget elementor-widget-image" data-id="59a94a6" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDk5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_MIRROR-GOLD_BR605-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368840" alt="Natural Mirror Gold - BR6050" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_MIRROR-GOLD_BR605-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_MIRROR-GOLD_BR605-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_MIRROR-GOLD_BR605-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_MIRROR-GOLD_BR605.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural mirror gold - br6050</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-2b6d1e1 elementor-widget elementor-widget-image" data-id="2b6d1e1" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTA2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-TK_BR612-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368839" alt="Natural Corten TK - BR6120" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-TK_BR612-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-TK_BR612-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-TK_BR612-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-TK_BR612.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural corten tk - br6120</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-f481f30 elementor-widget elementor-widget-image" data-id="f481f30" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTEzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_ALUNATUR-QUARTZINC_BR615-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368833" alt="Natural Alunatur Quartzinc - BR6150" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_ALUNATUR-QUARTZINC_BR615-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_ALUNATUR-QUARTZINC_BR615-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_ALUNATUR-QUARTZINC_BR615-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_ALUNATUR-QUARTZINC_BR615.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural alunatur quartzinc - br6150</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-9e571c8 elementor-widget elementor-widget-image" data-id="9e571c8" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTE5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_OSSIDIANA-VENA-CHIARA_BR620-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368843" alt="Natural Ossidiana Vena Chiara - BR6200" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_OSSIDIANA-VENA-CHIARA_BR620-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_OSSIDIANA-VENA-CHIARA_BR620-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_OSSIDIANA-VENA-CHIARA_BR620-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_OSSIDIANA-VENA-CHIARA_BR620.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural ossidiana vena chiara - br6200</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-818bc9d elementor-widget elementor-widget-image" data-id="818bc9d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTI2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-HON_KR606-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368842" alt="Natural Hon - KR6060" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-HON_KR606-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-HON_KR606-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-HON_KR606-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-HON_KR606.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural hon - kr6060</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-1077081 elementor-widget elementor-widget-image" data-id="1077081" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTM0IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_AREIA_KR607-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371237" alt="NATURAL AREIA - KR6070" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_AREIA_KR607-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_AREIA_KR607-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_AREIA_KR607-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_AREIA_KR607.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural areia - kr6070</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-37dd654 elementor-widget elementor-widget-image" data-id="37dd654" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTQwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_TERRA_KR608-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371239" alt="NATURAL TERRA - KR6080" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_TERRA_KR608-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_TERRA_KR608-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_TERRA_KR608-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_TERRA_KR608.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural terra - kr6080</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-30bd4e2 elementor-widget elementor-widget-image" data-id="30bd4e2" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTQ3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-BLACK_KR610-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371240" alt="NATURAL CORTEN BLACK - KR6100" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-BLACK_KR610-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-BLACK_KR610-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-BLACK_KR610-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-BLACK_KR610.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural corten black - kr6100</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-2d7baa5 elementor-widget elementor-widget-image" data-id="2d7baa5" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTUzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-611_KR611-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368836" alt="Natural Corten 611 - KR6110" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-611_KR611-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-611_KR611-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-611_KR611-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-611_KR611.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural corten 611 - kr6110</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-a00dc97 elementor-widget elementor-widget-image" data-id="a00dc97" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTU3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-624-BR_KR614-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371241" alt="NATURAL CORTEN 614 - BR KR6140" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-624-BR_KR614-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-624-BR_KR614-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-624-BR_KR614-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-624-BR_KR614.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural corten 614 - br kr6140</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-e36852d elementor-widget elementor-widget-image" data-id="e36852d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NTYzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CONCRETO_KR634-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368835" alt="Natural Concreto - KR6340" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CONCRETO_KR634-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CONCRETO_KR634-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CONCRETO_KR634-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CONCRETO_KR634.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">natural concreto - kr6340</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
-		<div id="e-n-tab-content-1608921197" role="tabpanel" aria-labelledby="e-n-tab-title-1608921197" data-tab-index="7" style="--n-tabs-title-order: 7;" class=" elementor-element elementor-element-4a4ebff e-flex e-con-boxed e-con e-child" data-id="4a4ebff" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-200ebc5 elementor-widget elementor-widget-heading" data-id="200ebc5" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">FUSION</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-ef3cf39 e-grid e-con-boxed e-con e-child" data-id="ef3cf39" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-5c0be2d elementor-widget elementor-widget-image" data-id="5c0be2d" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDAzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_EMERALD_BR802-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368820" alt="Fusion Emerald - BR8020" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_EMERALD_BR802-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_EMERALD_BR802-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_EMERALD_BR802-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_EMERALD_BR802.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">fusion emerald - br8020</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-441c7b4 elementor-widget elementor-widget-image" data-id="441c7b4" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDEwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_INDIAN_BR804-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368821" alt="Fusion Indian - BR8040" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_INDIAN_BR804-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_INDIAN_BR804-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_INDIAN_BR804-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_INDIAN_BR804.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">fusion indian - br8040</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-655f353 elementor-widget elementor-widget-image" data-id="655f353" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDE2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SPRING_BR808-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368824" alt="Fusion Spring - BR8080" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SPRING_BR808-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SPRING_BR808-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SPRING_BR808-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SPRING_BR808.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">fusion spring - br8080</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-ee235d9 elementor-widget elementor-widget-image" data-id="ee235d9" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDIyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SIERRA-ORANGE-GOLD_BR814-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368822" alt="Fusion Sierra Orange Gold - BR8140" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SIERRA-ORANGE-GOLD_BR814-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SIERRA-ORANGE-GOLD_BR814-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SIERRA-ORANGE-GOLD_BR814-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SIERRA-ORANGE-GOLD_BR814.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">fusion sierra orange gold - br8140</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-c5f5769 elementor-widget elementor-widget-image" data-id="c5f5769" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDI2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SKY_KR809-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368823" alt="Fusion Sky - KR8090" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SKY_KR809-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SKY_KR809-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SKY_KR809-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_SKY_KR809.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">fusion sky - kr8090</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-6c2cbe8 elementor-widget elementor-widget-image" data-id="6c2cbe8" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzY5NDMzIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_WHITE-GOLD_KR812-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33368825" alt="Fusion White Gold - KR8120" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_WHITE-GOLD_KR812-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_WHITE-GOLD_KR812-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_WHITE-GOLD_KR812-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/02/FUSION_WHITE-GOLD_KR812.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">fusion white gold - kr8120</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
-		<div id="e-n-tab-content-1608921198" role="tabpanel" aria-labelledby="e-n-tab-title-1608921198" data-tab-index="8" style="--n-tabs-title-order: 8;" class=" elementor-element elementor-element-6db3e1f e-flex e-con-boxed e-con e-child" data-id="6db3e1f" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-3b068d8 elementor-widget elementor-widget-heading" data-id="3b068d8" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">CRINKLE</h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-0d7314b e-grid e-con-boxed e-con e-child" data-id="0d7314b" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-2a69643 elementor-widget elementor-widget-image" data-id="2a69643" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTA1IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_WHITE-CRINKLE-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371884" alt="CRINKLE WHITE" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_WHITE-CRINKLE-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_WHITE-CRINKLE-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_WHITE-CRINKLE-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_WHITE-CRINKLE.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle white</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-33a1382 elementor-widget elementor-widget-image" data-id="33a1382" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTA4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_CINZA-TITANIUM-KR210-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371886" alt="CRINKLE CINZA TITANIUM KR2100" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_CINZA-TITANIUM-KR210-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_CINZA-TITANIUM-KR210-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_CINZA-TITANIUM-KR210-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_CINZA-TITANIUM-KR210.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle cinza titanium kr2100</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-5a75f48 elementor-widget elementor-widget-image" data-id="5a75f48" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTExIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_DARK-GREY-METALLIC-KR205-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371887" alt="CRINKLE DARK GREY METALLIC KR2050" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_DARK-GREY-METALLIC-KR205-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_DARK-GREY-METALLIC-KR205-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_DARK-GREY-METALLIC-KR205-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_DARK-GREY-METALLIC-KR205.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle dark grey metallic kr2050</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-fa8e6d2 elementor-widget elementor-widget-image" data-id="fa8e6d2" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTE4IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_GREY-RAL-7022-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371888" alt="CRINKLE GREY RAL 7022" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_GREY-RAL-7022-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_GREY-RAL-7022-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_GREY-RAL-7022-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_GREY-RAL-7022.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle grey ral 7022</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-57a3cde elementor-widget elementor-widget-image" data-id="57a3cde" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTIxIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-7022-CRINKLE-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371889" alt="CRINKLE RAL 7022" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-7022-CRINKLE-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-7022-CRINKLE-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-7022-CRINKLE-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-7022-CRINKLE.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle ral 7022</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-88a34c4 elementor-widget elementor-widget-image" data-id="88a34c4" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTI2IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1001-KR309-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371890" alt="CRINKLE BRONZE 1001 KR3090" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1001-KR309-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1001-KR309-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1001-KR309-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1001-KR309.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle bronze 1001 kr3090</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-43f5649 elementor-widget elementor-widget-image" data-id="43f5649" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTI5IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1002-KR310-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371891" alt="CRINKLE BRONZE 1002 KR3100" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1002-KR310-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1002-KR310-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1002-KR310-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1002-KR310.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle bronze 1002 kr3100</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-196daad elementor-widget elementor-widget-image" data-id="196daad" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTMyIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1003-KR307-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371892" alt="CRINKLE BRONZE 1003 KR3070" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1003-KR307-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1003-KR307-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1003-KR307-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BRONZE-1003-KR307.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle bronze 1003 kr3070</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-064054f elementor-widget elementor-widget-image" data-id="064054f" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTM3IiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-9005-JET-BLACK-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371893" alt="CRINKLE RAL 9005 JET BLACK" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-9005-JET-BLACK-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-9005-JET-BLACK-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-9005-JET-BLACK-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_RAL-9005-JET-BLACK.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle ral 9005 jet black</div></div></div>								</a>
-															</div>
-				</div>
-				<div class="elementor-element elementor-element-a4f8800 elementor-widget elementor-widget-image" data-id="a4f8800" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMzMzcxOTQwIiwidG9nZ2xlIjpmYWxzZX0%3D">
-							<div style="display: inline-block;"><div class="image-container" style="position: relative;"><img loading="lazy" decoding="async" width="1024" height="576" src="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BLACK-CRINKLE-1024x576.png" class="elementor-animation-float attachment-large size-large wp-image-33371894" alt="CRINKLE BLACK" srcset="https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BLACK-CRINKLE-1024x576.png 1024w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BLACK-CRINKLE-300x169.png 300w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BLACK-CRINKLE-768x432.png 768w, https://alucomaxx.com.br/wp-content/uploads/2025/03/CRINKLE_BLACK-CRINKLE.png 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px"><div class="alt-text">crinkle black</div></div></div>								</a>
-															</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
-					</div>
+	<img class="PdF" src="./plano de fundo folha.png" alt="">
+
+	<div class="barra-top"></div>
+	<!-- Sidebar -->
+	<nav class="barra-nav" id="barra-nav">
+		<!---------------------------------//---------------------------------->
+		<ul class="nav-links">
+			<li><a href="index.html" class="active"><i class="fas fa-home"></i><span>INICIO</span></a></li>
+			<li><a href="sobre.html" class="active"><i class="fas fa-home"></i><span>QUEM SOMOS</span></a></li>
+			<li><a href="" class="logo">
+					<h1 class="rainbow-text">AS INFORMATICA</h1>
+				</a></li>
+			<li><a href="contato.html"><i class="fas fa-envelope"></i><span>CONTATOS</span></a></li>
+			<li><a href="servicos.html"><i class="fas fa-envelope"></i><span>SERVIÇOS</span></a></li>
+		</ul>
+		<!---------------------------------//---------------------------------->
+	</nav>
+
+	<div class="filtros">
+		<button onclick="filtrarTipo('solido')">Sólido</button>
+		<button onclick="filtrarTipo('brilhante')">Brilhante</button>
+		<button onclick="filtrarTipo('metalico')">Metálico</button>
+		<button onclick="filtrarTipo('nano')">Nano</button>
+		<button onclick="filtrarTipo('madeirado')">Madeirado</button>
+		<button onclick="filtrarTipo('natural')">Natural</button>
+	</div>
+
+	<div class="amostras-acms">
+		<div class="solido">
+			<div class="card-acm" id="1">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_PURE-WHITE_KR100-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="2">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_WHITE_KR101-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="3">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRANCO-POLAR_KR104-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="4">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_LIGHT-GREY_KR107-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="5">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_OYSTER_KR108-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="6">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_BONE-WHITE_KR106-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="7">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLACK_KR150-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="8">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7021_KR157-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="9">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_SIGNAL-GREY_KR250-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="10">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RAL-7037_KR251-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="11">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_RAL-7045_KR253-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="12">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ANTHRACITE_KR257-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="13">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BRONZE-1003_KR307-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="14">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE-SESI_KR312-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="15">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-ULTRAMARINE_KR400-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="16">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-GM_KR401-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="17">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_NEW-BLUE-PEUGEOT_KR403-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="18">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_JADE-GL_KR407-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="19">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AZUL-2925C_KR409-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="20">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BLUE-VOLVO_KR410-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="21">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-FOSCO_KR450-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="22">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_VERDE-561C_KR452-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="23">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-GREEN_KR454-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="24">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RED-BANK_KR500-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="25">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_RUBY_KR501-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="26">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_BURGUNDY_KR509-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="27">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_YELLOW-RAL-1023_KR702-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="28">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-SHELL_KR703-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="29">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_AMARELO-RAL-1003_KR705-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="30">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ORANGE_KR710-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="31">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/SOLIDO_ORANGE-144C_KR754-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="32">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-7647C_KR907-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="33">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-7672C_KR909-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="34">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROXO-267U_KR914-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="35">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2018/10/SOLIDO_ROSA-RAL-4003_KR925-1024x576.png">
+			</div>
 		</div>
-						</div>
-				</div>
-					</div>
-				</div>
+
+		<div class="brilhante">
+			<div class="card-acm" id="36">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_BRANCO-ALASKA_KR103-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="37">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_BRANCO-ALTO-BRILHO_KR133-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="38">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_PRETO-BRILHANTE_KR151-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="39">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AZUL-BRILHANTE_KR406-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="40">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/03/BRILHANTES_AZUL-TURQUESA_KR438-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="41">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-BRILHANTE_KR451-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="42">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERDE-SICOOB_KR453-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="43">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_VERMELHO-BRILHANTE_KR502-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="44">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_AMARELO-BRILHANTE_KR701-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="45">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/BRILHANTES_LARANJA-BRILHANTE_KR751-1024x576.png">
+			</div>
+		</div>
+
+		<div class="metalico">
+			<div class="card-acm" id="46">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRASIL-SILVER-METALLIC_KR200-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="47">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-METALLIC_KR201-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="48">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_PRATA_KR202-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="49">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SMOKE-SILVER-METALLIC_KR203-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="50">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GREY-METALLIC_KR204-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="51">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_DARK-GREY-METALLIC_KR205-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="52">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CINZA-TITANIUM_KR210-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="53">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_CHAMPAGNE-METALLIC_KR300-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="54">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-METALLIC_KR302-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="55">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRIGHT-BRONZE-METALLIC_KR306-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="56">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1001_KR309-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="57">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BRONZE-1002_KR310-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="58">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_SILVER-GOLDEN_KR311-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="59">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_GOLD-METALLIC_KR313-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="60">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BROWN-METALLIC_KR361-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="61">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/METALICA_BLUE-METALLIC_KR404-1024x576.png">
+			</div>
+		</div>
+
+		<div class="nano">
+			<div class="card-acm" id="62">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_WHITE_BR850-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="63">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BLACK_BR851-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="64">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_CHAMPAGNE_BR852-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="65">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRONZE-1001_BR854-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="66">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_ANTHRACITE_BR855-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="67">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NANO_BRASIL-SILVER-METALLIC_BR856-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="68">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NANO_RAL-7044_BR857-1024x576.png">
+			</div>
+		</div>
+
+		<div class="madeirado">
+			<div class="card-acm" id="69">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_TEKA_BR950-1024x576.png">
+			</div>
+			<div class="card-acm" id="70">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CARVALHO-MEL_BR952-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="71">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_MOGNO-PE_BR955-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="72">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_DARK_BR956-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="73">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_WALNUT-NORDIC_BR958-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="74">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_IMBUIA-PE_BR961-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="75">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_AMERICAN-OAK_KR971-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="76">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MADEIRADO-2_KR973-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="77">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_CEREJEIRA_KR974-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="78">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_NEW-MOGNO_KR977-1024x576.png">
+			</div>
+			<div class="card-acm" id="79">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/WOOD_SUCUPIRA_KR980-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="80">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BLACK_KR983-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="81">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_MOGNO-CASTANHO_KR987-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="82">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/WOOD_BAMBOO_KR990-1024x576.png">
+			</div>
+		</div>
+
+		<div class="natural">
+			<div class="card-acm" id="83">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-BRUSHED_BR600-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="84">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_STAINLESS-STEEL_BR602-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="85">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_MIRROR-GOLD_BR605-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="86">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-TK_BR612-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="87">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_ALUNATUR-QUARTZINC_BR615-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="88">
+				<img
+					src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_OSSIDIANA-VENA-CHIARA_BR620-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="89">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_NATURAL-HON_KR606-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="90">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_AREIA_KR607-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="91">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_TERRA_KR608-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="92">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-BLACK_KR610-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="93">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CORTEN-611_KR611-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="94">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/03/NATURAL_CORTEN-624-BR_KR614-1024x576.png">
+			</div>
+
+			<div class="card-acm" id="95">
+				<img src="https://alucomaxx.com.br/wp-content/uploads/2025/02/NATURAL_CONCRETO_KR634-1024x576.png">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<h1>&copy; 2026 AS Informática. Todos os direitos reservados.</h1>
+	</footer>
+
+	<script>
+		function filtrarTipo(tipo) {
+			const todosDivs = document.querySelectorAll('.amostras-acms > div');
+
+			todosDivs.forEach(div => {
+				div.classList.remove('ativo');
+			});
+
+			if (tipo === 'todos') {
+				todosDivs.forEach(div => div.classList.add('ativo'));
+			} else {
+				const alvo = document.querySelector('.' + tipo);
+				if (alvo) {
+					alvo.classList.add('ativo');
+				}
+			}
+		}
+
+		// Mostrar todos ao carregar a página
+		window.onload = () => filtrarTipo('solido');
+	</script>
+
 </body>
 
 </html>
