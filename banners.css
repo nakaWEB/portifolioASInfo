@@ -42,3 +42,14 @@
     border-radius: 20px; 
     border: solid 1px black; 
 }
+
+.banner-menor2png {
+
+    width: 49%;
+    position: absolute;
+    top: 190%;
+    left: 99.5%;
+    border-radius: 20px; 
+    border: solid 1px black; 
+    transform: translateX(-100%);
+}
