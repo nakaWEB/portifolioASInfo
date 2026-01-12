@@ -18,6 +18,7 @@
     background: var(--bar-topo);
     width: 100%;
     height: 3%;
+    z-index: 10000;
 }
 .barra-nav {
     position: fixed;
@@ -50,7 +51,7 @@
     width: 180PX;
     display: flex;
     align-items: center;
-    padding: 9px 20px;
+    padding: 9px 10px;
     margin: 3px;
     border-radius: 5px;
     color: var(--botoes-barra);
@@ -97,76 +98,6 @@
     background-color: var(--botoes-barra-fundo)
 }
 /*------------------------------------//-------------------------------*/
-.theme-toggle {
-    position: absolute;
-    left: 93%;
-    width: 5%;
-    height: 70%;
-    padding: 10px;
-    background-color: var(--botoes-barra-fundo);
-    color: var(--botoes-barra);
-    border: 1px solid var(--botoes-barra-fundo);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.theme-toggle:hover {
-    background-color: var(--botoes-barra-fundo-hover);
-}
-/*------------------------------------//-------------------------------*/
-/* "barra de pesquisar" */
-.main-content {
-    margin-left: 280px;
-    min-height: 100vh;
-    transition: var(--transition);
-}
-
-.barra-nav.collapsed + .main-content {
-    margin-left: 80px;
-}
-
-.header {
-    padding: 7px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    height: min-content;
-    width: 80%;
-    position: fixed;
-    left: 20%;
-}
-
-.search-bar input {
-    flex: 1;
-    padding: 4px 15px;
-    border: 1px solid var(--botoes-barra-fundo);
-    border-radius: 2px;
-    background-color: var(--botoes-barra-fundo);
-    color: var(--botoes-barra);
-    outline: none;
-}
-
-.search-bar button {
-    padding: 5px 20px;
-    background-color: var(--botoes-barra-fundo);
-    color: var(--botoes-barra);
-    border: none;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.search-bar button:hover {
-    background-color: var(--botoes-barra-fundo-hover);
-}
-/*------------------------------------//-------------------------------*/
 /* Responsivi*/
 @media (max-width: 768px) {
     .barra-nav {
@@ -176,18 +107,6 @@
 
     .barra-nav.show {
         transform: translateX(0);
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .sectors-grid {
-        grid-template-columns: 2fr;
     }
 }
 /*------------------------------------//-------------------------------*/
@@ -226,7 +145,7 @@
 }
 /*------------------------------------//-------------------------------*/
 .rainbow-text {
-  font-size: 13px;
+  font-size: 17px;
   font-family: "Segoe UI", sans-serif;
   text-align: center;
   letter-spacing: 0.05em;

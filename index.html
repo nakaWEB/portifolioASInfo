@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Previne zoom e scroll em dispositivos móveis -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>AS INFORMATICA PORTIFOLIO</title>
 
     <link rel="stylesheet" href="./barra-nav.css">
     <link rel="stylesheet" href="./body.css">
+    <link rel="stylesheet" href="./carrocel.css">
     <link rel="stylesheet" href="./logo-meio .css">
+    <link rel="stylesheet" href="./banners.css">
+    <script src="./corrocel.js"></script>
 </head>
 <body>
     <img class="PdF" src="./plano de fundo folha.png" alt="">
@@ -24,16 +31,135 @@
             <li><a href="servicos.html"><i class="fas fa-envelope"></i><span>SERVIÇOS</span></a></li>
         </ul>
 <!---------------------------------//---------------------------------->
-        <a href="">
-            <h1 class="rainbow-text"></h1>
-        </a>
-<!---------------------------------//---------------------------------->
-        <button class="theme-toggle" id="themeToggle">
-            <i class="fas fa-moon"></i>
-        </button>
-<!---------------------------------//---------------------------------->
     </nav>
 
     <div class="meio1"><img class="logo-inc" src="./logo as.svg" alt=""></div>
+    
+    <div class="carousel-container">     
+        <!-- Linha 1 -->
+        <div class="carousel-row" data-row="1">
+            <div class="carousel-track">
+                <!-- Imagens com larguras diferentes -->
+                <div class="carousel-item" style="width: 200px;">
+                    <img src="https://picsum.photos/200/150?random=1" alt="Imagem 1">
+                </div>
+                <div class="carousel-item" style="width: 300px;">
+                    <img src="https://picsum.photos/300/150?random=2" alt="Imagem 2">
+                </div>
+                <div class="carousel-item" style="width: 250px;">
+                    <img src="https://picsum.photos/250/150?random=3" alt="Imagem 3">
+                </div>
+                <div class="carousel-item" style="width: 180px;">
+                    <img src="https://picsum.photos/180/150?random=4" alt="Imagem 4">
+                </div>
+                <div class="carousel-item" style="width: 320px;">
+                    <img src="https://picsum.photos/320/150?random=5" alt="Imagem 5">
+                </div>
+                <!-- Repetir para loop suave -->
+                <div class="carousel-item" style="width: 200px;">
+                    <img src="https://picsum.photos/200/150?random=1" alt="Imagem 1">
+                </div>
+                <div class="carousel-item" style="width: 300px;">
+                    <img src="https://picsum.photos/300/150?random=2" alt="Imagem 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha 2 - Direção oposta -->
+        <div class="carousel-row" data-row="2">
+            <div class="carousel-track">
+                <div class="carousel-item" style="width: 280px;">
+                    <img src="https://picsum.photos/280/150?random=6" alt="Imagem 6">
+                </div>
+                <div class="carousel-item" style="width: 220px;">
+                    <img src="https://picsum.photos/220/150?random=7" alt="Imagem 7">
+                </div>
+                <div class="carousel-item" style="width: 350px;">
+                    <img src="https://picsum.photos/350/150?random=8" alt="Imagem 8">
+                </div>
+                <div class="carousel-item" style="width: 190px;">
+                    <img src="https://picsum.photos/190/150?random=9" alt="Imagem 9">
+                </div>
+                <div class="carousel-item" style="width: 310px;">
+                    <img src="https://picsum.photos/310/150?random=10" alt="Imagem 10">
+                </div>
+                <!-- Repetir para loop suave -->
+                <div class="carousel-item" style="width: 280px;">
+                    <img src="https://picsum.photos/280/150?random=6" alt="Imagem 6">
+                </div>
+                <div class="carousel-item" style="width: 220px;">
+                    <img src="https://picsum.photos/220/150?random=7" alt="Imagem 7">
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha 3 -->
+        <div class="carousel-row" data-row="3">
+            <div class="carousel-track">
+                <div class="carousel-item" style="width: 240px;">
+                    <img src="https://picsum.photos/240/150?random=11" alt="Imagem 11">
+                </div>
+                <div class="carousel-item" style="width: 290px;">
+                    <img src="https://picsum.photos/290/150?random=12" alt="Imagem 12">
+                </div>
+                <div class="carousel-item" style="width: 210px;">
+                    <img src="https://picsum.photos/210/150?random=13" alt="Imagem 13">
+                </div>
+                <div class="carousel-item" style="width: 330px;">
+                    <img src="https://picsum.photos/330/150?random=14" alt="Imagem 14">
+                </div>
+                <div class="carousel-item" style="width: 200px;">
+                    <img src="https://picsum.photos/200/150?random=15" alt="Imagem 15">
+                </div>
+                <!-- Repetir para loop suave -->
+                <div class="carousel-item" style="width: 240px;">
+                    <img src="https://picsum.photos/240/150?random=11" alt="Imagem 11">
+                </div>
+                <div class="carousel-item" style="width: 290px;">
+                    <img src="https://picsum.photos/290/150?random=12" alt="Imagem 12">
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha 4 - Direção oposta -->
+        <div class="carousel-row" data-row="4">
+            <div class="carousel-track">
+                <div class="carousel-item" style="width: 270px;">
+                    <img src="https://picsum.photos/270/150?random=16" alt="Imagem 16">
+                </div>
+                <div class="carousel-item" style="width: 230px;">
+                    <img src="https://picsum.photos/230/150?random=17" alt="Imagem 17">
+                </div>
+                <div class="carousel-item" style="width: 300px;">
+                    <img src="https://picsum.photos/300/150?random=18" alt="Imagem 18">
+                </div>
+                <div class="carousel-item" style="width: 185px;">
+                    <img src="https://picsum.photos/185/150?random=19" alt="Imagem 19">
+                </div>
+                <div class="carousel-item" style="width: 295px;">
+                    <img src="https://picsum.photos/295/150?random=20" alt="Imagem 20">
+                </div>
+                <!-- Repetir para loop suave -->
+                <div class="carousel-item" style="width: 270px;">
+                    <img src="https://picsum.photos/270/150?random=16" alt="Imagem 16">
+                </div>
+                <div class="carousel-item" style="width: 230px;">
+                    <img src="https://picsum.photos/230/150?random=17" alt="Imagem 17">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./corrocel.js"></script>
+
+    <div class="banner-loja">
+        <div class="banner-maior770">
+            <img class="bannermaiorpng" src="./banner-maior.png" alt="">
+            <img class="logoascoloridasvg" src="./logo as colorida.svg" alt="">
+        </div>
+        <div class="banner-menor770">
+            <img class="banner-menor1png" src="./banner-menor1.png" alt="">
+            <img class="banner-menor1png" src="./banner-menor1.png" alt="">
+        </div>
+    </div>
 </body>
 </html>
