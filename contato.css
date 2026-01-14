@@ -1,0 +1,63 @@
+/* Variáveis CSS para tema */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #2c3e50;
+    --shadow: 0 2px 10px rgba(0, 247, 255, 0.1);
+    --transition: all 0.3s ease;
+    --bar-fundo: rgba(182, 182, 182, 0.164);
+}
+/*------------------------------------//-------------------------------*/
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --sidebar-bg: #2c3e50;
+    --card-bg: #000000;
+    --border-color: #404040;
+    --shadow: 0 2px 10px rgba(0,0,0,0.3);
+--bar-fundo: rgba(255, 255, 255, 0.164);
+}
+/*------------------------------------//-------------------------------*/
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    line-height: 1.6;
+}
+/*------------------------------------//-------------------------------*/
+.PdF {
+    width: 100%;
+    height: auto;
+    z-index: -20;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: invert(100%) grayscale(100%);
+}
+
+[data-theme="dark"] {
+    .PdF {
+    filter: invert(0%) grayscale(0%);
+}
+}
+/*------------------------------------//-------------------------------*/
+.main-content {
+    position: fixed;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-100%);
+    width: 50%;
+    background: var(--bar-fundo);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    align-items: center;
+}
+/*------------------------------------//-------------------------------*/
