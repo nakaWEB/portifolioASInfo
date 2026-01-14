@@ -57,6 +57,13 @@
 		top: 15%;
 		left: 50%;
 		transform: translateX(-50%);
+		width: min-content;
+		display: flex;
+		background: black;
+	}
+		.filtros p {
+		position: relative;
+		top: 87%;
 	}
 
 	.filtros button {
@@ -68,31 +75,29 @@
 </style>
 
 <body>
-	<img class="PdF" src="./plano de fundo folha.png" alt="">
+    <img class="PdF" src="./plano de fundo folha.png" alt="">
 
-	<div class="barra-top"></div>
-	<!-- Sidebar -->
-	<nav class="barra-nav" id="barra-nav">
-		<!---------------------------------//---------------------------------->
-		<ul class="nav-links">
-			<li><a href="index.html" class="active"><i class="fas fa-home"></i><span>INICIO</span></a></li>
-			<li><a href="sobre.html" class="active"><i class="fas fa-home"></i><span>QUEM SOMOS</span></a></li>
-			<li><a href="" class="logo">
-					<h1 class="rainbow-text">AS INFORMATICA</h1>
-				</a></li>
-			<li><a href="contato.html"><i class="fas fa-envelope"></i><span>CONTATOS</span></a></li>
-			<li><a href="servicos.html"><i class="fas fa-envelope"></i><span>SERVIÇOS</span></a></li>
-		</ul>
-		<!---------------------------------//---------------------------------->
-	</nav>
+    <div class="barra-top"></div>
+    <!-- Sidebar -->
+    <nav class="barra-nav" id="barra-nav">
+<!---------------------------------//---------------------------------->
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i><span>INICIO</span></a></li>
+            <li><a href="sobre.html" class="active"><i class="fas fa-home"></i><span>QUEM SOMOS</span></a></li>
+            <li><a href="" class="logo"><h1 class="rainbow-text">AS INFORMATICA</h1></a></li>
+            <li><a href="contato.html"><i class="fas fa-envelope"></i><span>CONTATOS</span></a></li>
+            <li><a href="servicos.html"><i class="fas fa-envelope"></i><span>SERVIÇOS</span></a></li>
+        </ul>
+<!---------------------------------//---------------------------------->
+    </nav>
 
 	<div class="filtros">
-		<button onclick="filtrarTipo('solido')">Sólido</button>
-		<button onclick="filtrarTipo('brilhante')">Brilhante</button>
-		<button onclick="filtrarTipo('metalico')">Metálico</button>
-		<button onclick="filtrarTipo('nano')">Nano</button>
-		<button onclick="filtrarTipo('madeirado')">Madeirado</button>
-		<button onclick="filtrarTipo('natural')">Natural</button>
+		<button onclick="filtrarTipo('solido')"><p>Sólido</p></button>
+		<button onclick="filtrarTipo('brilhante')"><p>Brilhante</p></button>
+		<button onclick="filtrarTipo('metalico')"><p>Metálico</p></button>
+		<button onclick="filtrarTipo('nano')"><p>Nano</p></button>
+		<button onclick="filtrarTipo('madeirado')"><p>Madeirado</p></button>
+		<button onclick="filtrarTipo('natural')"><p>Natural</p></button>
 	</div>
 
 	<div class="amostras-acms">
@@ -520,7 +525,7 @@
 	</div>
 
 	<footer>
-		<h1>&copy; 2026 AS Informática. Todos os direitos reservados.</h1>
+		<p>&copy; 2025 AS Informatica. Todos os direitos reservados.</p>
 	</footer>
 
 	<script>

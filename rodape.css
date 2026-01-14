@@ -1,25 +1,18 @@
 footer {
+    position: fixed;
+    top: 93%;
+    width: 100%;
     height: 7%;
     background: hsla(0, 0%, 0%, 0);
     backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;
 }
-footer h1 {
+footer p {
     color: #000;
     font-size: 15px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.conteudo-absoluto {
-  position: relative;          /* referência para os absolutos internos */
-  min-height: 100vh;           /* garante altura mínima */
-  background: black;
-}
-
-footer {
-  position: relative;          /* volta ao fluxo normal */
-  margin-top: 50px;            /* 50 px após o último elemento */
 }
